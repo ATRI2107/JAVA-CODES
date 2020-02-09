@@ -24,5 +24,6 @@ class hashmap
         System.out.println("Enter a String");
         x=sc.next();
         CharFreq(x);
+        sc.close();
     }
 }
