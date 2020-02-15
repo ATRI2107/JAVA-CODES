@@ -12,5 +12,6 @@ class digiroot
         System.out.println("Enter the number");
         n=sc.nextInt();
         System.out.println("Digital Root of "+n+" is:"+droot(n));
+        sc.close();
     }
 }
