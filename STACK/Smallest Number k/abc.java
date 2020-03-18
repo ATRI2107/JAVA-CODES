@@ -12,9 +12,10 @@ class abc
                 st.push(i);
                 n/=i;
             }
-            if(n!=1) return -1;
+            
 
         }
+        if(n!=1) return -1;
         long prod=0;
         while(!st.empty())
         {
