@@ -24,7 +24,8 @@ class majorarray
                 hm.put(i,1);
             }
         }
-        System.out.println(Collections.max(hm.entrySet(),(entry1,entry2)->entry1.getValue()-entry2.getValue()).getKey());
-
+        System.out.println();
+        int major=Collections.max(hm.entrySet(),(entry1,entry2)->entry1.getValue()-entry2.getValue()).getKey();
+        System.out.println(Collections.max(hm.values())>(int)(n/2)?major:-1);
     }
 }
