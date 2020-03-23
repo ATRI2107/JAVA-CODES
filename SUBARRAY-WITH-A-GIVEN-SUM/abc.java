@@ -38,5 +38,6 @@ class abc
             arr[i]=sc.nextInt();
         }
         subarraysum(arr,n,s);
+        sc.close();
     }
 }
