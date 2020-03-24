@@ -60,9 +60,9 @@ class abc
         String s;
         int numRows;
         Scanner sc=new Scanner(System.in);
-        System.out.println("Entr the string");
+        System.out.println("Enter the string");
         s=sc.next();
-        System.out.println("Entr the number of rows");
+        System.out.println("Enter the number of rows");
         numRows=sc.nextInt();
         System.out.println("Zig Zag Conversion is: "+zigzag(s,numRows));
         sc.close();
