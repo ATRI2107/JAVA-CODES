@@ -27,7 +27,19 @@ class abc
         {
             bl.append(String.valueOf(st.pop()));
         }
-        return String.valueOf(bl.reverse());
+        String s=String.valueOf(bl.reverse());
+        if(s.equals("0"))
+            return "0";
+        else
+        {
+            i=0;
+            while(i<s.length() && s.charAt(i)=='0')
+            {
+                i++;
+            }
+            return i==s.length()?"0":s.substring(i);
+        }
+        
     }
     public static void main(String[] args) {
         String n;
