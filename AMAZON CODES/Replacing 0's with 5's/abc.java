@@ -15,5 +15,6 @@ class abc
             c++;
         }
         System.out.println(s+n);
+        sc.close();
     }
 }
