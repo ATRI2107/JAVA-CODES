@@ -9,7 +9,7 @@ class abc
         {
             s+=a[i];
             if(s==sum) res=i+1;
-            if(hm.containsKey(s)) hm.put(s,i);
+            if(!hm.containsKey(s)) hm.put(s,i);
             if(hm.containsKey(s-sum)) res=Math.max(res, i-hm.get(s-sum));
         }
         return res;
