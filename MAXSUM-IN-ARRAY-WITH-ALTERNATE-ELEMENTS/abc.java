@@ -7,7 +7,7 @@ class abc
         {
             int temp=incl;
             incl=Math.max(a[i]+excl,incl);
-            excl=incl;
+            excl=temp;
         }
         System.out.println(incl);
     }
