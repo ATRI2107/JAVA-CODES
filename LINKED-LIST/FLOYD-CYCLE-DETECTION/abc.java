@@ -15,9 +15,9 @@ class List
         Node slow=head,fast=head;
         while(fast!=null && fast.next!=null)
         {
-            if(slow==fast) return true;
             slow=slow.next;
             fast=fast.next.next;
+            if(slow==fast) return true;
         }
         return false;
     }
@@ -31,8 +31,7 @@ class abc
         list.head.next.next = new Node(15); 
         list.head.next.next.next = new Node(4); 
         list.head.next.next.next.next = new Node(10); 
-        // Creating a loop for testing 
-        list.head.next.next.next.next.next = list.head.next.next;
+
         System.out.println(list.cycleDetect()); 
     }
 }
