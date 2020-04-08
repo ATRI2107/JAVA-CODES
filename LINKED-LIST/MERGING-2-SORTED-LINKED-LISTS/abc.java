@@ -59,7 +59,7 @@ class LinkedList
 
         B.insertEnd(2);
         B.insertEnd(3);
-        B.insertEnd(11);
+        B.insertEnd(4);
         
         display(merge(A.head,B.head));
     }
