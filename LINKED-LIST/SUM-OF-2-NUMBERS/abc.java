@@ -82,9 +82,7 @@ class abc
         list1.insertEnd(4);
         list1.insertEnd(3);
 
-        list2.insertEnd(5);
-        list2.insertEnd(6);
-        list2.insertEnd(4); 
+        list2.insertEnd(1); 
         
         Node rest_head=res.addList(list1.head, list2.head);
         res.display(rest_head);
