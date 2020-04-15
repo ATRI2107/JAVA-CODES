@@ -16,7 +16,7 @@ public static void main(String[] args) {
             while(!st.isEmpty() && a[st.peek()]>=a[i])
             {
                 int x=st.pop();
-                int area=a[x]*(st.isEmpty()?1:(i-st.peek()-1)); 
+                int area=a[x]*(st.isEmpty()?i:(i-st.peek()-1)); 
                 res=Math.max(area,res);
             }
             st.push(i);
