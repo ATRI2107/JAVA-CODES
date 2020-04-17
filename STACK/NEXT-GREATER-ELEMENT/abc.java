@@ -4,17 +4,15 @@ class abc
     static void nextGreat(int a[],int n)
     {
         Stack<Integer> st=new Stack<>();
-        st.push(a[n-1]);
         int res[]=new int[n];
-        res[n-1]=-1;
-        for(int i=n-2;i>-1;i--)
+        Arrays.fill(res,-1);
+        for(int i=0;i<n;i++)
         {
-            while(!st.isEmpty() && a[i]>=st.peek())
+            while(!st.isEmpty() && a[st.peek()]<=a[i])
             {
-                st.pop();
+                res[st.pop()]=a[i];
             }
-            res[i]=st.isEmpty()?-1:st.peek();
-            st.push(a[i]);
+            st.push(i);
         }
         for(int i:res)
         {
