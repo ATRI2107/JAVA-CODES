@@ -20,6 +20,15 @@ class Tree
             inorder(root.right);
         }
     }
+    void preorder(Node root)
+    {
+        if(root!=null)
+        {
+            System.out.print(root.data+" ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
 }
 class abc
 {
@@ -31,5 +40,8 @@ class abc
         root.right.right=new Node(50);
         Tree obj=new Tree();
         obj.inorder(root);
+        System.out.println();
+        obj.preorder(root);
+        System.out.println();
     }
 }
