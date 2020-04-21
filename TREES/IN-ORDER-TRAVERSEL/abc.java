@@ -29,6 +29,15 @@ class Tree
             preorder(root.right);
         }
     }
+    void postorder(Node root)
+    {
+        if(root!=null)
+        {
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data+" ");
+        }
+    }
 }
 class abc
 {
@@ -42,6 +51,8 @@ class abc
         obj.inorder(root);
         System.out.println();
         obj.preorder(root);
+        System.out.println();
+        obj.postorder(root);
         System.out.println();
     }
 }
