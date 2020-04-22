@@ -25,6 +25,19 @@ class Tree
         if(root==null) return 0;
         return 1+Math.max(getHeight(root.left),getHeight(root.right));
     }
+    void printKDist(Node root,int k)
+    {
+        if(root==null) return;
+        if(k==0)
+        {
+            System.out.print(root.data+" ");
+        }
+        else
+        {
+            printKDist(root.left, k-1);
+            printKDist(root.right, k-1);
+        }
+    }
 }
 class abc
 {
@@ -38,5 +51,8 @@ class abc
         System.out.println("Number of Nodes in the tree= "+obj.getSize(root));
         System.out.println("Max of the binary tree= "+obj.getMax(root));
         System.out.println("Height of the tree= "+obj.getHeight(root));
+        System.out.print("Nodes at a distance k: ");
+        obj.printKDist(root, 2); //here k is 2
+        System.out.println();
     }
 }
