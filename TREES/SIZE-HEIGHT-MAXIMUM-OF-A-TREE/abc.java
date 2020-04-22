@@ -20,6 +20,11 @@ class Tree
         if(root==null) return Integer.MIN_VALUE;
         return Math.max(root.data,Math.max(getMax(root.left),getMax(root.right)));
     }
+    int getHeight(Node root)
+    {
+        if(root==null) return 0;
+        return 1+Math.max(getHeight(root.left),getHeight(root.right));
+    }
 }
 class abc
 {
@@ -32,5 +37,6 @@ class abc
         Tree obj=new Tree();
         System.out.println("Number of Nodes in the tree= "+obj.getSize(root));
         System.out.println("Max of the binary tree= "+obj.getMax(root));
+        System.out.println("Height of the tree= "+obj.getHeight(root));
     }
 }
