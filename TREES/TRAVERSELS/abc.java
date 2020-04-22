@@ -11,6 +11,20 @@ class Node
 }
 class Tree
 {
+    void levelOrder(Node root)
+    {
+        Queue<Node> q=new LinkedList<Node>();
+        q.add(root);
+        while(!q.isEmpty())
+        {
+            Node head=q.peek();
+            System.out.print(head.data+" ");
+            q.remove();
+            if(head.left!=null) q.add(head.left);
+            if(head.right!= null) q.add(head.right);
+        }
+        System.out.println();        
+    }
     void inorder(Node root)
     {
         if(root!=null)
@@ -54,5 +68,6 @@ class abc
         System.out.println();
         obj.postorder(root);
         System.out.println();
+        obj.levelOrder(root);
     }
 }
