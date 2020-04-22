@@ -17,11 +17,15 @@ class Tree
         q.add(root);
         while(!q.isEmpty())
         {
-            Node head=q.peek();
-            System.out.print(head.data+" ");
-            q.remove();
-            if(head.left!=null) q.add(head.left);
-            if(head.right!= null) q.add(head.right);
+            int count=q.size();
+            for(int i=0;i<count;i++)
+            {
+                Node head=q.poll();
+                System.out.print(head.data+" ");
+                if(head.left!=null) q.add(head.left);
+                if(head.right!= null) q.add(head.right);
+            }
+            System.out.println();            
         }
         System.out.println();        
     }
