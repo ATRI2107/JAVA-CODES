@@ -54,11 +54,14 @@ class abc
         root.right.left=new Node(40);
         root.right.right=new Node(50);
         ArrayList<Integer> al=new ArrayList<>();
-        new Tree().serialize(root, al);
+        Tree obj=new Tree();
+        obj.serialize(root, al);
         for(Integer i:al)
         {
             System.out.print(i+" ");
         }
+        System.out.println();
+        obj.inorder(obj.desrialize(al));
         System.out.println();
     }
 }
