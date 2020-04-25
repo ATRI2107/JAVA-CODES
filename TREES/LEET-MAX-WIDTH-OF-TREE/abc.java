@@ -23,7 +23,7 @@ class Tree
     void maxWidth(Node root,int depth,int position)
     {
         if(root==null) return;
-        hm.computeIfAbsent(depth,x->position);
+        hm.computeIfAbsent(depth,x->position); // Hash MAp is for storing the position and depth of the left most node of each level
         max_width=Math.max(max_width,position-hm.get(depth)+1);
         maxWidth(root.left, depth+1, position*2);
         maxWidth(root.right, depth+1, position*2+1);
