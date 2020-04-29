@@ -41,3 +41,14 @@ class abc
         System.out.println();
     }
 }
+/*
+Input: The root of a Binary Search Tree like this:
+              5
+            /   \
+           2     13
+
+Output: The root of a Greater Tree like this:
+             18
+            /   \
+          20     13
+*/
