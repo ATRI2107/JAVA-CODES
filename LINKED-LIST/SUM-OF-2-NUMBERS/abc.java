@@ -42,7 +42,7 @@ class List
 
         if(head1.next!=null && head1.next.data>9)
         {
-            head1.data=1;
+            head1.data+=1;
             head1.next.data%=10;
         }
         return head1;
@@ -82,7 +82,7 @@ class abc
         list1.insertEnd(4);
         list1.insertEnd(3);
 
-        list2.insertEnd(1); 
+        list2.insertEnd(9); 
         
         Node rest_head=res.addList(list1.head, list2.head);
         res.display(rest_head);
