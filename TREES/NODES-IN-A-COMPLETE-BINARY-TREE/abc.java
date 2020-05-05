@@ -11,6 +11,7 @@ class Tree
 {
     int countNode(Node root)
     {
+        if(root==null) return 0;
         int lh=0,rh=0;
         Node curr=root;
         while(curr!=null)
