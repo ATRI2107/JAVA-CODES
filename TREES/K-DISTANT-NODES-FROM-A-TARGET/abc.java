@@ -21,7 +21,7 @@ class Tree
         if(root==null) return -1;
         else if(root==target)
         {
-            kdistroot(root,0,k);
+            kdistroot(root,0,k); // finding k distance below the target
             return 1;
         }
         else
