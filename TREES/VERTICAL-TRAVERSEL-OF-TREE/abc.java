@@ -47,8 +47,8 @@ class Tree{
             Collections.sort(temp,new Comparator<Pair>() {
                 public int compare(Pair p1,Pair p2)
                 {
-                    int k=Integer.compare(p1.y,p2.y);
-                    return (k==0)?Integer.compare(p1.node.data,p2.node.data):k;
+                    int k=Integer.compare(p1.y,p2.y); //First sort according to the height
+                    return (k==0)?Integer.compare(p1.node.data,p2.node.data):k; //If height is equal then sort according to the node value
                 }
             });
             ArrayList<Integer> temp1=new ArrayList<>();
