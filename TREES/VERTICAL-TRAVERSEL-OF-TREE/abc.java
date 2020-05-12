@@ -12,7 +12,7 @@ class Tree{
     class Pair
     {
         Node node;
-        int y;
+        int y; // y denotes height of the Node
         Pair(Node node,int y)
         {
             this.node=node;
