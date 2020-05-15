@@ -4,9 +4,9 @@ class Triplet implements Comparable<Triplet>
     int  val,ap,ep;
     Triplet(int val,int ap,int ep)
     {
-        this.val=val;
-        this.ap=ap;
-        this.ep=ep;
+        this.val=val; // stores the value of a list
+        this.ap=ap; // stores the array position from which val belongs
+        this.ep=ep; // stores the position of val in that list
     }
     public int compareTo(Triplet t)
     {
