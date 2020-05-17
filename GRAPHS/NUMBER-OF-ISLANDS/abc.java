@@ -18,7 +18,7 @@ class Graph
     void bfs(ArrayList<ArrayList<Integer>> list,int i,int j,boolean[][] vis)
     {
         Queue<pair> q=new LinkedList<>();
-        int row[]={-1,-1,-1,0,0,1,1,1};
+        int row[]={-1,-1,-1,0,0,1,1,1}; // Arrays for all the 8 neighbours of a point
         int col[]={-1,0,1,-1,1,-1,0,1};
         q.add(new pair(i,j));
         vis[i][j]=true;
