@@ -25,6 +25,14 @@ class Tree
         if(root==null) return 0;
         return 1+Math.max(getHeight(root.left),getHeight(root.right));
     }
+    int minDepth(Node root)
+    {
+        if(root==null) return 0;
+        if(root.left==null && root.right==null) return 1;
+        if(root.left==null) return 1+minDepth(root.right);
+        if(root.right==null) return 1+minDepth(root.left);
+        return 1+Math.min(minDepth(root.left),minDepth(root.right));
+    }
     void printKDist(Node root,int k)
     {
         if(root==null) return;
@@ -66,5 +74,6 @@ class abc
         System.out.println();
         obj.countLeafNodes(root);
         System.out.println("Number of Leaf Nodes="+obj.c);
+        System.out.println("Min Depth= "+obj.minDepth(root));
     }
 }
