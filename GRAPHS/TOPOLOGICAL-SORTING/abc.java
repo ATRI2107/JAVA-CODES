@@ -22,11 +22,11 @@ class abc
                 q.add(i);
             }
         }
-        ArrayList<Integer> res=new ArrayList<>();
+        
         while(!q.isEmpty())
         {
             int curr=q.poll();
-            res.add(curr);
+            System.out.print(curr+" ");
             for(int v:list.get(curr))
             {
                 in[v]--;
@@ -36,10 +36,6 @@ class abc
                     q.add(v);
                 }
             }
-        }
-        for(int i:res)
-        {
-            System.out.print(i+" ");
         }
         System.out.println();
         
