@@ -26,11 +26,16 @@ class List{
     ListNode middle(ListNode head)
     {
         if(head==null) return head;
-        ListNode slow=head,fast=head;
-        while(fast.next!=null && fast.next.next!=null)
+        ListNode slow=head,fast=head,prev=null;
+        while(fast!=null && fast.next!=null)
         {
+            prev=slow;
             slow=slow.next;
             fast=fast.next.next;
+        }
+        if(prev!=null)
+        {
+            prev.next=null;
         }
         return slow;
     }
@@ -55,10 +60,8 @@ class List{
         
         if(head==null || head.next==null) return head;
          ListNode mid=middle(head);
-        ListNode next=mid.next;
-        mid.next=null;
         ListNode left=sortList(head);
-        ListNode right=sortList(next);
+        ListNode right=sortList(mid);
         ListNode sorted_list=merge(left,right);
         return sorted_list;
     }
@@ -73,11 +76,10 @@ class abc
 {
     public static void main(String[] args) {
         List l=new List();
-        l.insertEnd(50);
-        l.insertEnd(30);
-        l.insertEnd(40);
-        l.insertEnd(10);
-        l.insertEnd(20);
+        l.insertEnd(5);
+        l.insertEnd(3);
+        l.insertEnd(4);
+        l.insertEnd(6);
 
         ListNode result_head=l.sortList(l.head);
         l.display(result_head);
