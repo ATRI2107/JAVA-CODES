@@ -1,4 +1,6 @@
 import java.util.*;
+
+import javax.lang.model.util.ElementScanner6;
 class abc
 {
     public static void main(String[] args) {
@@ -26,7 +28,23 @@ class abc
                 dp[i][j]=Math.max(dp[i-1][j],dp[i][j-1]);
             }
         }
+        int i=m,j=n;
+        String lcs="";
+        while(i>0 && j>0)
+        {
+            if(s1.charAt(i-1)==s2.charAt(j-1))
+            {
+                lcs=s1.charAt(i-1)+lcs;
+                i--;
+                j--;
+            }
+            else if(dp[i-1][j]>dp[i][j-1])
+            i--;
+            else
+            j--;
+        }
         System.out.println(dp[m][n]);
+        System.out.println(lcs);
         sc.close();
     }
 }
