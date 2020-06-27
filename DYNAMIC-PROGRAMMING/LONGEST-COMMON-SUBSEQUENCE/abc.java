@@ -1,6 +1,4 @@
 import java.util.*;
-
-import javax.lang.model.util.ElementScanner6;
 class abc
 {
     public static void main(String[] args) {
