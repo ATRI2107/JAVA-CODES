@@ -26,7 +26,7 @@ class abc
             {
                 dp[i][j]=dp[i-1][j];
                 if(j>=a[i-1])
-                dp[i][j]+=dp[i][j-a[i-1]];
+                dp[i][j]+=dp[i-1][j-a[i-1]];
             }
         }
         System.out.println(dp[n][sum]);
