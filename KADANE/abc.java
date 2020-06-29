@@ -12,12 +12,12 @@ class abc
         {
             arr[i]=sc.nextInt();
         }
-        ArrayList<Integer> al=new ArrayList<>();//To store the max ending sum
-        al.add(arr[0]);
+        int curr_max=arr[0],max_so_far=arr[0];
         for(int i=1;i<n;i++)
         {
-            al.add(Math.max(al.get(i-1)+arr[i],arr[i]));
+            curr_max=Math.max(arr[i],curr_max+arr[i]);
+            max_so_far=Math.max(curr_max,max_so_far);
         }
-        System.out.println(Collections.max(al));
+        System.out.println(max_so_far);
     }
 }
