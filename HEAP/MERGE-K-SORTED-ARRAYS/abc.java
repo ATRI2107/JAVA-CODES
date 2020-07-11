@@ -1,5 +1,5 @@
 import java.util.*;
-class Triplet implements Comparable<Triplet>
+class Triplet 
 {
     int  val,ap,ep;
     Triplet(int val,int ap,int ep)
@@ -8,17 +8,18 @@ class Triplet implements Comparable<Triplet>
         this.ap=ap; // stores the array position from which val belongs
         this.ep=ep; // stores the position of val in that list
     }
-    public int compareTo(Triplet t)
-    {
-        if(this.val<=t.val) return -1;
-        else return 1;
-    }
+    
 }
 class abc
 {
     static ArrayList<Integer> mergeK(ArrayList<ArrayList<Integer>> arr)
     {
-        PriorityQueue<Triplet> pq=new PriorityQueue<>();
+        PriorityQueue<Triplet> pq=new PriorityQueue<>(new Comparator<Triplet>(){
+            public int compare(Triplet t1,Triplet t2)
+            {
+                return Integer.compare(t1.val, t2.val);
+            }
+        });
         ArrayList<Integer> res=new ArrayList<>();
         for(int i=0;i<arr.size();i++)
         {
